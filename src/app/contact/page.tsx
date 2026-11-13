@@ -1,0 +1,163 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { Mail, Phone, MapPin } from "lucide-react";
+import ContactForm from "@/components/ContactForm";
+
+export default function Contact() {
+    return (
+        <div className="min-h-screen bg-white pb-20">
+
+            {/* ── Hero Cover Section ── */}
+            <div className="relative w-full h-[400px] md:h-[480px] overflow-hidden">
+                <img
+                    src="/assets/contact-hero.webp"
+                    alt="Contact NextPath Global"
+                    className="absolute inset-0 w-full h-full object-cover object-center"
+                />
+                {/* Dark navy → white fade overlay */}
+                <div className="absolute inset-0 bg-gradient-to-b from-[#0d1b2a]/80 via-[#0d1b2a]/55 to-white" />
+
+                {/* Hero Content */}
+                <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center pt-16">
+                    <motion.div
+                        initial={{ opacity: 0, y: 28 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.9 }}
+                    >
+                        <span className="inline-block bg-[#c9a84c]/20 border border-[#c9a84c]/40 text-[#f0d485] text-sm font-semibold uppercase tracking-widest px-5 py-2 rounded-full mb-5">
+                            💬 We&apos;re Here to Help
+                        </span>
+                        <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-4 drop-shadow-lg">
+                            Contact <span className="text-[#c9a84c]">Us</span>
+                        </h1>
+                        <p className="text-white/80 max-w-2xl mx-auto text-lg leading-relaxed">
+                            Get in touch with our expert consultants to start your global journey today.
+                        </p>
+                    </motion.div>
+                </div>
+            </div>
+
+            <div className="container mx-auto px-6 mt-4 mb-0">
+                <div className="mb-12" />
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    {/* Contact Info */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="space-y-8"
+                    >
+                        <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-lg">
+                            <h3 className="text-2xl font-bold mb-6 text-gray-900">Get in Touch</h3>
+                            <div className="space-y-6">
+                                {/* Bangladesh Office */}
+                                <div className="flex items-start gap-4">
+                                    <div className="bg-primary/10 p-3 rounded-full text-primary shrink-0 mt-1">
+                                        <MapPin size={24} />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-gray-900 text-lg mb-1">Bangladesh Office (Dhaka):</h4>
+                                        <p className="text-gray-600 leading-relaxed mb-2">
+                                            House No- 18, Road No- 11, Dhaka- 1229, Bangladesh.
+                                        </p>
+                                        <div className="flex flex-col gap-1.5 text-sm">
+                                            <a href="https://wa.me/8801402179802" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors flex items-center gap-1.5 font-medium">
+                                                <span>💬 +880 1402 179802</span>
+                                            </a>
+                                            <a href="https://wa.me/8801410237495" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors flex items-center gap-1.5 font-medium">
+                                                <span>💬 +88 014 1023 7495</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Corporate Office */}
+                                <div className="flex items-start gap-4 pt-4 border-t border-gray-100">
+                                    <div className="bg-primary/10 p-3 rounded-full text-primary shrink-0 mt-1">
+                                        <MapPin size={24} />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-gray-900 text-lg mb-1">Corporate Office (Kuala Lumpur):</h4>
+                                        <p className="text-gray-600 leading-relaxed mb-2">
+                                            Level 41, The Intermark, Vista Tower, 384, Jln Tun Razak, Kampung Datuk Keramat, 50400 Kuala Lumpur, Federal Territory of Kuala Lumpur.
+                                        </p>
+                                        <div className="flex flex-col gap-1.5 text-sm">
+                                            <a href="https://wa.me/601116695249" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors flex items-center gap-1.5 font-medium">
+                                                <span>💬 +60 11 1669 5249</span>
+                                            </a>
+                                            <a href="https://wa.me/60172965249" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors flex items-center gap-1.5 font-medium">
+                                                <span>💬 +60 17 296 5249</span>
+                                            </a>
+                                            <a href="https://wa.me/601125368220" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors flex items-center gap-1.5 font-medium">
+                                                <span>💬 +60 11 2536 8220</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Emails */}
+                                <div className="flex items-start gap-4 pt-4 border-t border-gray-100">
+                                    <div className="bg-primary/10 p-3 rounded-full text-primary shrink-0 mt-1">
+                                        <Mail size={24} />
+                                    </div>
+                                    <div className="space-y-1">
+                                        <h4 className="font-bold mb-1 text-gray-900">Email Us</h4>
+                                        <p className="text-gray-600 flex items-center gap-1 flex-wrap text-sm">
+                                            <a href="mailto:info@nextpathglobal.my" className="hover:text-primary transition-colors font-medium">info@nextpathglobal.my</a>
+                                            <span className="text-gray-500 text-xs">(general Query)</span>
+                                        </p>
+                                        <p className="text-gray-600 flex items-center gap-1 flex-wrap text-sm">
+                                            <a href="mailto:partnerships@nextpathglobal.my" className="hover:text-primary transition-colors font-medium">partnerships@nextpathglobal.my</a>
+                                            <span className="text-gray-500 text-xs">(B2B partnership)</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Google Map */}
+                        <div className="space-y-4">
+                            <div className="flex items-center justify-between">
+                                <h3 className="text-xl font-bold text-gray-900">Our Location</h3>
+                                <a
+                                    href="https://www.google.com/maps/place/The+Intermark/@3.1613799,101.72279131475766,17z/data=!3m1!4b1!4m6!3m5!1s0x31cc37d3a837f637:0x4a6c3a2a81de0d90!8m2!3d3.16138!4d101.7253662!16s%2Fg%2F11bw3y8p0v"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-primary hover:text-primary/80 transition-colors text-sm font-medium flex items-center gap-1"
+                                >
+                                    View larger map
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div className="h-[300px] md:h-[400px] lg:h-[500px] rounded-2xl border border-gray-200 overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                                <iframe
+                                    src="https://www.google.com/maps?q=NextPath+Global+Sdn+Bhd,+Level+41+The+Intermark+Vista+Tower,+Jalan+Tun+Razak,+Kuala+Lumpur&output=embed&z=17"
+                                    width="100%"
+                                    height="100%"
+                                    style={{ border: 0 }}
+                                    allowFullScreen
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                    title="NextPath Global Office Location - The Intermark, Kuala Lumpur"
+                                />
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* Contact Form */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                    >
+                        <ContactForm />
+                    </motion.div>
+                </div>
+            </div>
+        </div>
+    );
+}
