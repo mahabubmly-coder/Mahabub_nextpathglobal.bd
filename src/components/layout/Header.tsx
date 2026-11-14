@@ -73,7 +73,7 @@ export default function Header() {
                     aria-label="NextPath Global Home"
                 >
                     <Image
-                        src="/assets/logo-transparent.webp"
+                        src="/assets/logo-transparent.png"
                         alt="NextPath Global"
                         fill
                         className="object-contain object-left"
